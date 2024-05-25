@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Freehand&family=Hubballi&family=Nunito:wght@200;300;400;600;700&family=Playball&family=Poppins:wght@500&family=Roboto+Slab:wght@500&family=Roboto:wght@300&family=Ubuntu&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    font-family: "poppins", sans-serif;
+}
