@@ -1,8 +1,10 @@
+/* eslint-disable react/no-unknown-property */
 // import React from 'react'
 import list from "../../public/list.json";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Cards from './Cards';
 
 
 function Freebook() {
@@ -53,35 +55,16 @@ function Freebook() {
                         corporis nulla non suscipit, iure neque earum?
                     </p>
                 </div>
-            
-            <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
-                <Slider {...settings}>
-                    <div>
-                        <h3>1</h3>
-                    </div>
-                    <div>
-                        <h3>2</h3>
-                    </div>
-                    <div>
-                        <h3>3</h3>
-                    </div>
-                    <div>
-                        <h3>4</h3>
-                    </div>
-                    <div>
-                        <h3>5</h3>
-                    </div>
-                    <div>
-                        <h3>6</h3>
-                    </div>
-                    <div>
-                        <h3>7</h3>
-                    </div>
-                    <div>
-                        <h3>8</h3>
-                    </div>
-                </Slider>
-            </div>
+
+                <div>
+                    <Slider {...settings}>
+                        {
+                            filterData.map((item) => (
+                                <Cards item={item} key={item.id} />
+                            ))
+                        }
+                    </Slider>
+                </div>
             </div>
         </>
     )
